@@ -1,0 +1,288 @@
+:root {
+  --color-ink: #2E2E2E;
+  --color-muted: #6B6B6B;
+  --color-ground: #FFFFFF;
+  --color-divider: #E2E2E2;
+  --color-accent: #066AFE;
+  --color-accent-text: #0250D9;
+  --tag-bg: #FFC94D;
+  --tag-ink: #141414;
+
+  --card-wismo: #FFE8A3;
+  --card-wismo-spine: #FFD043;
+  --card-customer360: #EAEAEA;
+  --card-customer360-spine: #B0B0B0;
+  --card-recare: #C3DBFF;
+  --card-recare-spine: #032D60;
+  --card-cart: #FDDDE3;
+  --card-cart-spine: #FE8F7D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-ground);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 120px 20px 160px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 64px 20px 96px;
+  }
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 680px;
+}
+
+.eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: var(--tag-bg);
+  color: var(--tag-ink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.eyebrow-text {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero-copy p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero-copy p.muted {
+  color: var(--color-muted);
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: var(--color-ground);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-accent {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-accent-text);
+  text-decoration: none;
+}
+
+.link-accent:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--color-divider);
+  margin: 64px 0 48px;
+}
+
+.hero + .divider {
+  margin-top: 80px;
+  margin-bottom: 56px;
+}
+
+/* Section header */
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 600px;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Work section */
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.card-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 200px;
+  min-height: 300px;
+  padding: 20px 16px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-wismo { background-color: var(--card-wismo); }
+.card-customer360 { background-color: var(--card-customer360); }
+.card-recare { background-color: var(--card-recare); }
+.card-cart { background-color: var(--card-cart); }
+
+.card-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+}
+
+.card-wismo .card-spine { background-color: var(--card-wismo-spine); }
+.card-customer360 .card-spine { background-color: var(--card-customer360-spine); }
+.card-recare .card-spine { background-color: var(--card-recare-spine); }
+.card-cart .card-spine { background-color: var(--card-cart-spine); }
+
+.card-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.card-heading h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+.card-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+.card-illustration {
+  width: 130px;
+  height: auto;
+  max-height: 128px;
+  object-fit: contain;
+  margin-top: 8px;
+}
+
+.card-caption {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4;
+  color: #1E1E1E;
+  margin: 0;
+  margin-top: auto;
+}
+
+.older-work {
+  align-self: flex-start;
+}
+
+/* Link sections */
+
+.link-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

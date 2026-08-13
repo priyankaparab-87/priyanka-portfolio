@@ -11,8 +11,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-name" href="#top">Priyanka Parab</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#work">Work</a>
+        <a href="#playground">Playground</a>
+        <a href="#thoughts">Thoughts</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page" id="top">
+    <section class="hero" id="contact">
       <div class="eyebrow-row">
         <span class="tag">Design Lead</span>
         <span class="eyebrow-text">Cimpress — Commerce</span>
@@ -31,7 +47,7 @@
 
     <hr class="divider" />
 
-    <section class="work">
+    <section class="work" id="work">
       <div class="section-header">
         <h2>Latest work</h2>
         <p class="muted">Work from the last 5 years at Cimpress for an end-to-end order management platform.</p>
@@ -84,7 +100,7 @@
 
     <hr class="divider" />
 
-    <section class="link-section">
+    <section class="link-section" id="playground">
       <div class="section-header">
         <h2>AI Playground</h2>
         <p class="muted">Exploring practical ways in which AI can help us</p>
@@ -97,7 +113,7 @@
 
     <hr class="divider" />
 
-    <section class="link-section">
+    <section class="link-section" id="thoughts">
       <div class="section-header">
         <h2>Thoughts &amp; Process</h2>
         <p class="muted">My ways of working and process</p>
@@ -109,5 +125,24 @@
       </div>
     </section>
   </main>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
 </html>

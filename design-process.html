@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Priyanka Parab — Design Lead</title>
-  <meta name="description" content="Design Lead at Cimpress, Commerce domain. Designing and playing strategy-based games takes up most of my time." />
+  <title>My Design Process — Priyanka Parab</title>
+  <meta name="description" content="A lightweight framework for keeping UX, Product, and Engineering aligned — from the first sign of a problem to a shipped, measured feature." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,117 +13,97 @@
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a class="nav-name" href="#top">Priyanka Parab</a>
+      <a class="nav-name" href="index.html#top">Priyanka Parab</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav class="nav-links" id="navLinks">
-        <a href="#work">Work</a>
-        <a href="#playground">Playground</a>
-        <a href="#thoughts">Thoughts</a>
-        <a class="nav-contact" href="#contact">Contact</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#playground">Playground</a>
+        <a href="index.html#thoughts">Thoughts</a>
+        <a class="nav-contact" href="index.html#contact">Contact</a>
       </nav>
     </div>
   </header>
-  <main class="page" id="top">
-    <section class="hero" id="contact">
-      <div class="eyebrow-row">
-        <span class="tag">Design Lead</span>
-        <span class="eyebrow-text">Cimpress — Commerce</span>
+
+  <main class="page process-page" id="top">
+    <a class="link-accent" href="index.html#thoughts">← Back to portfolio</a>
+
+    <div class="process-header">
+      <span class="process-eyebrow">My design process</span>
+      <h1 class="process-title">UX - Modus Operandi</h1>
+    </div>
+
+    <div class="process-intro">
+      <p>A lightweight framework I use to keep UX, Product, and Engineering aligned across Commerce — from the first sign of a problem to a shipped, measured feature.</p>
+      <div class="process-pills">
+        <span class="pill">Early clarity</span>
+        <span class="pill">Fast iteration</span>
+        <span class="pill">Accurate delivery</span>
+        <span class="pill">Shared visibility</span>
       </div>
-      <h1>Hi. I'm Priyanka</h1>
-      <div class="hero-copy">
-        <p>Designing and playing strategy-based games takes up most of my time.</p>
-        <p class="muted">The remaining time is spent in cross-domain collaboration with PM's and engineering on what really needs to be built and aligning stakeholders on the vision. I have previously worked at Drona HQ, Freight Tiger, Trepup and currently lead design at Cimpress (Commerce domain).</p>
-        <p>I like working with kind and curious people who enjoy ownership of their work.</p>
-      </div>
-      <div class="cta-row">
-        <a class="btn-primary" href="#contact">Contact details</a>
-        <a class="link-accent" href="#resume">Resume</a>
-      </div>
-    </section>
+    </div>
 
     <hr class="divider" />
 
-    <section class="work" id="work">
-      <div class="section-header">
-        <h2>Latest work</h2>
-        <p class="muted">Work from the last 5 years at Cimpress for an end-to-end order management platform.</p>
+    <div class="phase-row">
+      <div class="phase-icon phase-icon-wismo">🔭</div>
+      <div class="phase-content">
+        <span class="phase-eyebrow">Phase 1 — Discovery</span>
+        <h2 class="phase-title">Get to the root of the issue</h2>
+        <p class="phase-body">Research the issue thoroughly to make sure a scalable solution is identified before committing to a direction, and loop in engineering early to check what's technically feasible.</p>
+        <div class="phase-tags">
+          <span class="tag tag-going">5 Whys &amp; problem framing</span>
+          <span class="tag tag-going">Early engineering syncs</span>
+          <span class="tag tag-going">Lightweight proposal docs</span>
+        </div>
       </div>
-
-      <div class="card-row">
-        <article class="card card-wismo">
-          <div class="card-spine"></div>
-          <div class="card-heading">
-            <h3>WISMO</h3>
-            <p class="card-sub">Where is my order?</p>
-          </div>
-          <img src="images/wismo.png" alt="Illustration of a person diving into a box" class="card-illustration" />
-          <p class="card-caption">Track your order for seamless remediation</p>
-        </article>
-
-        <article class="card card-customer360">
-          <div class="card-spine"></div>
-          <div class="card-heading">
-            <h3>Customer 360</h3>
-            <p class="card-sub">Understand your customer</p>
-          </div>
-          <img src="images/customer360.png" alt="Illustration of a person reading a book while sitting cross-legged" class="card-illustration" />
-          <p class="card-caption">Understand your customer for better sales</p>
-        </article>
-
-        <article class="card card-recare">
-          <div class="card-spine"></div>
-          <div class="card-heading">
-            <h3>Recare</h3>
-            <p class="card-sub">Save on refunds</p>
-          </div>
-          <img src="images/recare.png" alt="Illustration of a person running" class="card-illustration" />
-          <p class="card-caption">How to save $1mn on refunds and replacements</p>
-        </article>
-
-        <article class="card card-cart">
-          <div class="card-spine"></div>
-          <div class="card-heading">
-            <h3>Cart</h3>
-            <p class="card-sub">Order placement</p>
-          </div>
-          <img src="images/cart.png" alt="Illustration of a person hugging a giant cup" class="card-illustration" />
-          <p class="card-caption">Customer centric order placement</p>
-        </article>
-      </div>
-
-      <a class="link-accent older-work" href="https://www.behance.net/prip/projects" target="_blank" rel="noopener">Some older work</a>
-    </section>
+    </div>
 
     <hr class="divider" />
 
-    <section class="link-section" id="playground">
-      <div class="section-header">
-        <h2>AI Playground</h2>
-        <p class="muted">Exploring practical ways in which AI can help us</p>
+    <div class="phase-row">
+      <div class="phase-icon phase-icon-customer360">🎨</div>
+      <div class="phase-content">
+        <span class="phase-eyebrow">Phase 2 — Design</span>
+        <h2 class="phase-title">Lead with visuals</h2>
+        <p class="phase-body">Draft UI within the same week/day a problem surfaces, then iterate fast with feedback from both internal and external teams.</p>
+        <div class="phase-tags">
+          <span class="tag tag-going">UI drafts within the week</span>
+          <span class="tag tag-going">Figma + Miro feedback loops</span>
+          <span class="tag tag-going">Living change log</span>
+        </div>
       </div>
-      <div class="link-list">
-        <a class="link-accent" href="#">Chrome Gmail helper extension for seniors</a>
-        <a class="link-accent" href="#">PWA for sharing location for seniors</a>
-      </div>
-    </section>
+    </div>
 
     <hr class="divider" />
 
-    <section class="link-section" id="thoughts">
-      <div class="section-header">
-        <h2>Thoughts &amp; Process</h2>
-        <p class="muted">My ways of working and process</p>
+    <div class="phase-row">
+      <div class="phase-icon phase-icon-recare">🚀</div>
+      <div class="phase-content">
+        <span class="phase-eyebrow">Phase 3 — Delivery</span>
+        <h2 class="phase-title">Make sure it ships right</h2>
+        <p class="phase-body">Stay close to engineering through deployment so what launches actually matches what was designed.</p>
+        <div class="phase-tags">
+          <span class="tag tag-new">Design QA on the live build</span>
+          <span class="tag tag-new">Weekly cross-team sync</span>
+          <span class="tag tag-new">Track known gaps post-launch</span>
+        </div>
       </div>
-      <div class="link-list">
-        <a class="link-accent" href="#">Working with me</a>
-        <a class="link-accent" href="design-process.html">My design process</a>
-        <a class="link-accent" href="#">What I think about design</a>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="phase-row">
+      <div class="phase-icon phase-icon-order">📣</div>
+      <div class="phase-content">
+        <span class="phase-eyebrow">Share the work</span>
+        <h2 class="phase-title">Close the loop</h2>
+        <p class="phase-body">Nominate team's work for the bi-weekly UX showcase so the wider design org can react to it early — while there's still time to change course.</p>
       </div>
-    </section>
+    </div>
   </main>
 
   <div class="player" id="player">

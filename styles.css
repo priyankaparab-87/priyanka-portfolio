@@ -646,26 +646,27 @@ h1 {
 .timeline {
   display: flex;
   flex-direction: column;
+  margin-top: 28px;
 }
 
 .timeline-item {
   display: flex;
-  gap: 24px;
-  padding: 32px 0;
+  gap: 20px;
+  padding: 28px 0;
 }
 
 .timeline-item:first-child {
-  padding-top: 4px;
+  padding-top: 0;
 }
 
 .timeline-item:last-child {
-  padding-bottom: 4px;
+  padding-bottom: 0;
 }
 
 .timeline-track {
   position: relative;
   flex-shrink: 0;
-  width: 16px;
+  width: 14px;
   display: flex;
   justify-content: center;
 }
@@ -682,11 +683,13 @@ h1 {
 }
 
 .timeline-item:first-child .timeline-track::before {
-  top: 8px;
+  top: 3px;
 }
 
 .timeline-item:last-child .timeline-track::before {
-  bottom: calc(100% - 8px);
+  bottom: auto;
+  top: 0;
+  height: 20px;
 }
 
 .timeline-dot {

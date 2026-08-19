@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Priyanka Parab — Design Lead</title>
-  <meta name="description" content="Design Lead at Cimpress, Commerce domain. Designing and playing strategy-based games takes up most of my time." />
+  <title>Recare — Priyanka Parab</title>
+  <meta name="description" content="Redesigning Recare to surface compensation history upfront and introduce guardrails that prevent financial leakage." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,127 +13,79 @@
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a class="nav-name" href="#top">Priyanka Parab</a>
+      <a class="nav-name" href="index.html#top">Priyanka Parab</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav class="nav-links" id="navLinks">
-        <a href="#work">Work</a>
-        <a href="#playground">Playground</a>
-        <a href="#thoughts">Thoughts</a>
-        <a class="nav-contact" href="#contact">Contact</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#playground">Playground</a>
+        <a href="index.html#thoughts">Thoughts</a>
+        <a class="nav-contact" href="index.html#contact">Contact</a>
       </nav>
     </div>
   </header>
-  <main class="page" id="top">
-    <section class="hero" id="contact">
-      <div class="eyebrow-row">
-        <span class="tag">Design Lead</span>
-        <span class="eyebrow-text">Cimpress — Commerce</span>
+
+  <main class="page case-study-page cs-recare" id="top">
+    <a class="link-accent" href="index.html#work">← Back to portfolio</a>
+
+    <div class="cs-header">
+      <span class="cs-eyebrow">Case study — Recare</span>
+      <h1 class="cs-title">Recare: Preventing Refund and Credit Leakage</h1>
+      <p class="cs-subtitle">Redesigning Recare to surface compensation history upfront and introduce guardrails that prevent financial leakage — not just a refund UI improvement.</p>
+    </div>
+
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat-value">~$1M</span>
+        <span class="cs-stat-label">Annual leakage from incorrect refunds and credits</span>
       </div>
-      <h1>Hi. I'm Priyanka</h1>
-      <div class="hero-copy">
-        <p>I'm a designer who enjoys solving complex problems and building things, and I still love getting into the actual craft of it, the details of an interaction or a flow. Over the last two years, experimenting with AI to build my own UIs without developers has opened up a whole new side of UX for me, closing the gap between an idea and something testable.</p>
-        <p class="muted">Today, I lead two design teams across Commerce at Cimpress. I work closely with PMs and engineering to shape what we build and why, and to make it work across different business domains. I also partner with a global team on design system consistency, keeping teams aligned across time zones.</p>
-        <p class="muted">Before Cimpress, I worked at Drona HQ, Freight Tiger, and Trepup.</p>
-        <p>I like working with kind and curious people who take ownership, ask good questions, and enjoy figuring things out together.</p>
+      <div class="cs-stat">
+        <span class="cs-stat-value cs-stat-value-text">Guardrails</span>
+        <span class="cs-stat-label">Refunds and credits blocked once an order is fully compensated</span>
       </div>
-      <div class="cta-row">
-        <a class="btn-primary" href="#contact">Contact details</a>
-        <a class="link-accent" href="#resume">Resume</a>
-      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <section class="cs-section">
+      <h2>The problem</h2>
+      <p>The existing refund experience showed agents only the information required to issue a refund. It did not provide enough historical context about what had already been refunded or credited against the order or individual items.</p>
+      <p>As a result, agents could issue a full refund without knowing that part of the order had already been compensated.</p>
+      <p>For example, if an order was worth $100 and had already received a $50 credit, the appropriate refund would be $50. Without that context, agents could inadvertently refund the full $100, effectively overpaying the customer.</p>
+      <p>At scale, this created significant financial leakage.</p>
     </section>
 
     <hr class="divider" />
 
-    <section class="work" id="work">
-      <div class="section-header">
-        <h2>Latest work</h2>
-        <p class="muted">Work from the last 5 years at Cimpress for an end-to-end order management platform.</p>
-      </div>
-
-      <div class="card-row">
-        <article class="card card-wismo">
-          <div class="card-spine"></div>
-          <div class="card-heading">
-            <h3>WISMO</h3>
-            <p class="card-sub">Where is my order?</p>
-          </div>
-          <img src="images/wismo.png" alt="Illustration of a person diving into a box" class="card-illustration" />
-          <p class="card-caption">Track your order for seamless remediation</p>
-        </article>
-
-        <a class="card-link" href="case-study-customer360.html">
-          <article class="card card-customer360">
-            <div class="card-spine"></div>
-            <div class="card-heading">
-              <h3>Customer 360</h3>
-              <p class="card-sub">Understand your customer</p>
-            </div>
-            <img src="images/customer360.png" alt="Illustration of a person reading a book while sitting cross-legged" class="card-illustration" />
-            <p class="card-caption">Understand your customer for better sales</p>
-            <p class="card-cta">View case study →</p>
-          </article>
-        </a>
-
-        <a class="card-link" href="case-study-recare.html">
-          <article class="card card-recare">
-            <div class="card-spine"></div>
-            <div class="card-heading">
-              <h3>Recare</h3>
-              <p class="card-sub">Save on refunds</p>
-            </div>
-            <img src="images/recare.png" alt="Illustration of a person running" class="card-illustration" />
-            <p class="card-caption">How to save $1mn on refunds and replacements</p>
-            <p class="card-cta">View case study →</p>
-          </article>
-        </a>
-
-        <a class="card-link" href="case-study-order-placement.html">
-          <article class="card card-cart">
-            <div class="card-spine"></div>
-            <div class="card-heading">
-              <h3>Cart</h3>
-              <p class="card-sub">Order placement</p>
-            </div>
-            <img src="images/cart.png" alt="Illustration of a person hugging a giant cup" class="card-illustration" />
-            <p class="card-caption">Customer centric order placement</p>
-            <p class="card-cta">View case study →</p>
-          </article>
-        </a>
-      </div>
-
-      <a class="link-accent older-work" href="https://www.behance.net/prip/projects" target="_blank" rel="noopener">Some older work</a>
+    <section class="cs-section">
+      <h2>1. Surface refund and credit history</h2>
+      <p>We introduced previous refund and credit history directly into the refund workflow. Before issuing a refund, agents could immediately see whether the order had previously received a refund or credit, or whether an individual item had already been refunded or credited.</p>
+      <p>The goal was deliberately simple: introduce the right amount of friction at the right moment. Instead of expecting agents to investigate the order across different parts of the system, we surfaced the information exactly when they were about to make a financial decision.</p>
+      <p>This gave agents an opportunity to pause and ask: has this customer already been compensated for this issue?</p>
     </section>
 
     <hr class="divider" />
 
-    <section class="link-section" id="playground">
-      <div class="section-header">
-        <h2>AI Playground</h2>
-        <p class="muted">Exploring practical ways in which AI can help us</p>
-      </div>
-      <div class="link-list">
-        <a class="link-accent" href="#">Chrome Gmail helper extension for seniors</a>
-        <a class="link-accent" href="#">PWA for sharing location for seniors</a>
-      </div>
+    <section class="cs-section">
+      <h2>2. Make overpayment visible</h2>
+      <p>We also introduced clear overpayment call-outs when the system detected that an order or item had already received more compensation than it was eligible for. This turned what was previously hidden financial context into an explicit signal for the agent.</p>
+      <p>The experience moved from issuing a refund and discovering context later, to understanding compensation history first and making an informed decision.</p>
     </section>
 
     <hr class="divider" />
 
-    <section class="link-section" id="thoughts">
-      <div class="section-header">
-        <h2>Thoughts &amp; Process</h2>
-        <p class="muted">My ways of working and process</p>
-      </div>
-      <div class="link-list">
-        <a class="link-accent" href="#">Working with me</a>
-        <a class="link-accent" href="design-process.html">My design process</a>
-        <a class="link-accent" href="#">What I think about design</a>
-      </div>
+    <section class="cs-section">
+      <h2>3. Move from warnings to guardrails</h2>
+      <p>For cases where an order or item was already overpaid, we went one step further. As a product team, we decided that these cases should be blocked from further Recare actions, specifically refunds and credits.</p>
+      <p>This was an important shift in our approach. Rather than relying entirely on agents to interpret warnings correctly, we built the business rule directly into the product.</p>
     </section>
+
+    <div class="cs-closing">
+      <p>The redesign established a progressive set of safeguards — history, awareness, warning, and prevention. We first gave agents the context they were missing, then highlighted potential overpayment, and finally prevented additional financial actions when the system determined that compensation had already exceeded the eligible amount. This transformed Recare from a transactional refund tool into a financial control point, helping agents make better decisions while protecting the business from repeat refunds, credits, and accidental overpayment.</p>
+    </div>
   </main>
 
   <div class="player" id="player">

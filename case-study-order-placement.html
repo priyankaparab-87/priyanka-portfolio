@@ -32,73 +32,130 @@
     <a class="link-accent" href="index.html#work">← Back to portfolio</a>
 
     <div class="cs-header">
-      <span class="cs-eyebrow">Case study — Order Placement</span>
       <h1 class="cs-title">Order Placement: From Cart to Sales Workflow</h1>
       <p class="cs-subtitle">Rebuilding Order Placement as an end-to-end sales workflow — from customer lookup to order conversion — rather than a cart redesign.</p>
     </div>
 
+    <div class="cs-compare">
+      <div class="cs-compare-frame">
+        <div class="cs-compare-panel is-before"><span class="cs-compare-badge is-before">Before</span></div>
+        <div class="cs-compare-panel is-after"><span class="cs-compare-badge is-after">After</span></div>
+        <div class="cs-compare-divider"></div>
+        <div class="cs-compare-handle">↔</div>
+      </div>
+      <p class="cs-compare-caption">Before / after — Order Placement flow (image placeholder, drop screenshots here)</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="cs-section">
+      <h2>Impact</h2>
+      <p>We rebuilt Order Placement from the ground up to reduce friction across the sales agent's entire workflow, not just the cart experience. By bringing customer lookup, reorders, product customization, and payment into one seamless flow, we significantly reduced the effort required to create an order and drove a massive reduction in Average Handle Time (AHT).</p>
+    </div>
+
     <div class="cs-stats">
       <div class="cs-stat">
-        <span class="cs-stat-value cs-stat-value-text">AHT ↓</span>
-        <span class="cs-stat-label">Consolidating a fragmented cart workflow into one flow drove a massive reduction in Average Handle Time</span>
+        <span class="cs-stat-value">AHT ↓</span>
+        <p class="cs-stat-label">Average Handle Time</p>
+        <p class="cs-stat-caption">Consolidating the fragmented cart workflow into one flow drove a massive reduction in AHT.</p>
       </div>
       <div class="cs-stat">
         <span class="cs-stat-value">50%+</span>
-        <span class="cs-stat-label">Of all orders were reorders — redesigned around this dominant behavior</span>
+        <p class="cs-stat-label">Of all orders were reorders</p>
+        <p class="cs-stat-caption">The experience was redesigned around this dominant behavior as the primary workflow pattern.</p>
       </div>
     </div>
 
     <hr class="divider" />
 
-    <section class="cs-section">
+    <div class="cs-section">
       <h2>The challenge</h2>
-      <p>Order Placement had evolved into more than a traditional cart. For sales agents, a cart could also represent a quote, with the eventual goal of converting that quote into an order. This meant the experience needed to support the full journey from identifying the customer to building a customized purchase and completing payment.</p>
+      <p class="cs-lead">Order Placement had evolved into more than a traditional cart. For sales agents, a cart could also represent a quote, with the eventual goal of converting that quote into an order.</p>
+      <p>This meant the experience needed to support the full journey from identifying the customer to building a customized purchase and completing payment.</p>
       <p>The existing experience required agents to navigate across fragmented workflows, making a relatively simple sales interaction unnecessarily complex.</p>
-    </section>
+    </div>
 
     <hr class="divider" />
 
-    <section class="cs-section">
-      <h2>1. Start with the customer</h2>
+    <div class="cs-section">
+      <h2>Reframing the experience</h2>
+      <p>We rebuilt Order Placement around four shifts, from identifying the customer through to completing payment:</p>
+    </div>
+
+    <div class="cs-section">
+      <h3>1. Start with the customer</h3>
       <p>We first simplified customer lookup, making it faster for agents to identify and select the right customer before beginning the order.</p>
       <p>This created a clear starting point for the workflow and established the customer context that could then power the rest of the experience.</p>
-    </section>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Customer lookup — screenshot</p>
+      </div>
+    </div>
 
-    <hr class="divider" />
-
-    <section class="cs-section">
-      <h2>2. Design around reorders</h2>
+    <div class="cs-section">
+      <h3>2. Design around reorders</h3>
       <p>Data showed that more than 50% of orders were reorders. Instead of treating every order as a new purchase, we redesigned the experience around this dominant behavior.</p>
       <p>Previous customer orders were surfaced prominently, allowing agents to quickly find an existing product and use it as the starting point for a new order.</p>
       <p>This significantly reduced the effort required to place repeat orders and resulted in a substantial reduction in AHT.</p>
-    </section>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Reorder flow — screenshot</p>
+      </div>
+    </div>
 
-    <hr class="divider" />
-
-    <section class="cs-section">
-      <h2>3. Bring customization into Add to Cart</h2>
+    <div class="cs-section">
+      <h3>3. Bring customization into Add to Cart</h3>
       <p>The products being sold often required significant customization, so simply adding an existing product to a cart was not enough. We built a richer Add to Cart workflow that brought the key sales actions together:</p>
       <div class="cs-fields">
-        <span class="tag tag-going">Customize products</span>
-        <span class="tag tag-going">Apply discounts</span>
-        <span class="tag tag-going">Add or edit artwork</span>
-        <span class="tag tag-going">Reuse artwork from previous orders</span>
-        <span class="tag tag-going">Build on existing products</span>
+        <span class="cs-tag">Customize products</span>
+        <span class="cs-tag">Apply discounts</span>
+        <span class="cs-tag">Add or edit artwork</span>
+        <span class="cs-tag">Reuse artwork from previous orders</span>
+        <span class="cs-tag">Build on existing products</span>
       </div>
       <p>This transformed Add to Cart from a transactional action into a core part of the sales workflow.</p>
-    </section>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Add to Cart workflow — screenshot</p>
+      </div>
+    </div>
 
-    <hr class="divider" />
-
-    <section class="cs-section">
-      <h2>4. Build for the future of payments</h2>
+    <div class="cs-section">
+      <h3>4. Build for the future of payments</h3>
       <p>Payment was another critical part of the journey. While the underlying payment APIs were not yet ready, we designed the UX with future extensibility in mind.</p>
       <p>Rather than optimizing for a single payment method, we created a flexible structure that could accommodate multiple payment methods as the APIs matured.</p>
       <p>This allowed us to establish the interaction model early while keeping the experience scalable for future payment capabilities.</p>
-    </section>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Payment flow — screenshot</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
 
     <div class="cs-closing">
-      <p>The fundamental shift was treating Order Placement as an end-to-end sales workflow, rather than a collection of cart features. By connecting customer context, reorder behavior, customization, discounts, artwork management, and payment into one coherent experience, we reduced the cognitive and operational load on sales agents while creating a scalable foundation for future order placement capabilities.</p>
+      <h2>Designing beyond the cart</h2>
+      <p>The fundamental shift was treating Order Placement as an end-to-end sales workflow, rather than a collection of cart features.</p>
+      <p>By connecting customer context, reorder behavior, customization, discounts, artwork management, and payment into one coherent experience, we reduced the cognitive and operational load on sales agents while creating a scalable foundation for future order placement capabilities.</p>
+      <div class="cs-closing-line">
+        <p>One workflow. One conversion path. Every sale, start to finish.</p>
+      </div>
     </div>
   </main>
 

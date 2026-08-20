@@ -1060,12 +1060,20 @@ h1 {
   flex-shrink: 0;
 }
 
+.cs-bullet-item.is-muted::before {
+  background-color: var(--color-muted);
+}
+
 .cs-bullet-item p {
   margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-ink);
+}
+
+.cs-bullet-item.is-muted p {
+  color: var(--color-muted);
 }
 
 .cs-fields {
@@ -1083,6 +1091,56 @@ h1 {
   font-size: 13px;
   font-weight: 500;
   color: var(--color-ink);
+}
+
+.cs-tag.is-going {
+  background-color: var(--tag-going-bg);
+  color: var(--tag-going-text);
+}
+
+.cs-tag.is-warning {
+  background-color: #FDE9D9;
+  color: #9A5A16;
+}
+
+.cs-tag.is-new {
+  background-color: var(--tag-new-bg);
+  color: var(--tag-new-text);
+}
+
+.cs-tag.is-dark {
+  border-radius: 6px;
+  background-color: var(--color-ink);
+  color: var(--color-ground);
+}
+
+.cs-persona {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin-top: 16px;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #F8F8F8;
+}
+
+.cs-persona-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cs-persona-row .cs-persona-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.cs-persona-row .cs-persona-flow {
+  font-size: 15px;
+  color: var(--color-muted);
 }
 
 .cs-flow {

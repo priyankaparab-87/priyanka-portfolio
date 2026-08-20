@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WISMO — Priyanka Parab</title>
+  <meta name="description" content="Turning the Order Details screen into a single source of truth for customer care and order investigation — a 48% drop in AHT and 70% CSAT increase." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="nav-name" href="index.html#top">Priyanka Parab</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#playground">Playground</a>
+        <a href="index.html#thoughts">Thoughts</a>
+        <a class="nav-contact" href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page case-study-page cs-wismo" id="top">
+    <a class="link-accent" href="index.html#work">← Back to portfolio</a>
+
+    <div class="cs-header">
+      <h1 class="cs-title">Where is my order ?</h1>
+      <p class="cs-subtitle">Turning the Order Details screen into a single source of truth for customer care and order investigation.</p>
+    </div>
+
+    <div class="cs-compare">
+      <div class="cs-compare-frame">
+        <div class="cs-compare-panel is-before"><span class="cs-compare-badge is-before">Before</span></div>
+        <div class="cs-compare-panel is-after"><span class="cs-compare-badge is-after">After</span></div>
+        <div class="cs-compare-divider"></div>
+        <div class="cs-compare-handle">↔</div>
+      </div>
+      <p class="cs-compare-caption">Before / after — Order Details screen (image placeholder, drag to compare)</p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="cs-section">
+      <h2>Impact first</h2>
+    </div>
+
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <span class="cs-stat-value">48%</span>
+        <p class="cs-stat-label">decrease in Average Handle Time</p>
+        <p class="cs-stat-caption">Across order-related customer-care queries over the first seven months.</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-value">70%</span>
+        <p class="cs-stat-label">increase in CSAT</p>
+        <p class="cs-stat-caption">Among agents using the redesigned Order Details experience.</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-value">&lt;3s</span>
+        <p class="cs-stat-label">to answer WISMO</p>
+        <p class="cs-stat-caption">Agents could quickly answer the most common question, "Where is my order?"</p>
+      </div>
+      <div class="cs-stat">
+        <span class="cs-stat-value">↓</span>
+        <p class="cs-stat-label">Faster technical investigation</p>
+        <p class="cs-stat-caption">Support and engineering teams could investigate order issues directly from the same experience, without switching between systems.</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="cs-section">
+      <h2>The challenge</h2>
+      <p class="cs-lead">"Where is my order?" (WISMO) accounted for roughly 50% of customer-care inquiries, yet the existing Order Details experience made answering it unnecessarily difficult.</p>
+      <p>Agents had to navigate across three different platforms, piece together information from different sections, and scroll extensively through the page. This became particularly painful for complex orders with multiple items.</p>
+      <p>At the same time, the experience served very different personas, from customer-care agents to support, engineering and production teams, each requiring different levels of information and investigation.</p>
+      <div class="cs-quote">
+        <p>The opportunity was to turn Order Details from a place that stored information into a place where users could immediately understand what was happening with an order.</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="cs-section">
+      <h2>Reframing the experience</h2>
+      <p>We rebuilt the experience around three principles:</p>
+    </div>
+
+    <div class="cs-section">
+      <h3>1. Make the order journey immediately understandable</h3>
+      <p>We introduced an Order Timeline that surfaced the most important events in the order lifecycle.</p>
+      <p>Instead of searching through multiple systems, agents could now see the progression of an order in one place and quickly answer the customer's question.</p>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Order Timeline — screenshot</p>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h3>2. Reduce scrolling and improve discovery</h3>
+      <p>The existing horizontal item cards made complex orders difficult to scan.</p>
+      <p>We redesigned them as vertical cards, allowing more items to be visible within the available viewport. We also improved artwork and item previews and introduced clearer navigation across:</p>
+      <div class="cs-fields">
+        <span class="cs-tag">Items</span>
+        <span class="cs-tag">Shipping</span>
+        <span class="cs-tag">Billing</span>
+        <span class="cs-tag">Financials</span>
+        <span class="cs-tag">Customer Information</span>
+        <span class="cs-tag">Events</span>
+      </div>
+      <p>Related information was grouped together so agents could find what they needed without constantly navigating the page.</p>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Vertical item cards — screenshot</p>
+      </div>
+    </div>
+
+    <div class="cs-section">
+      <h3>3. Bring order and customer context together</h3>
+      <p>We introduced a dedicated Pricing card with a detailed financial breakdown, making order-level refunds, credits and payment investigations easier.</p>
+      <p>We also brought customer metadata into Order Details, eliminating the need to open another system to understand the customer, their tier and the appropriate recovery action.</p>
+      <p>Agents could now make decisions with order and customer context in one place.</p>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Pricing card &amp; customer metadata — screenshot</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="cs-section">
+      <h2>Designing for more than customer care</h2>
+      <p>As we explored the broader ecosystem, we found that Order Details was also critical for support, engineering and production teams.</p>
+      <p>Every order generates a large number of business-specific lifecycle events. Simply exposing them wasn't enough. We needed to make them understandable and actionable.</p>
+      <p>We introduced event categories such as:</p>
+      <div class="cs-fields">
+        <span class="cs-tag is-going">Key Events</span>
+        <span class="cs-tag is-warning">Warnings</span>
+        <span class="cs-tag">Updates</span>
+        <span class="cs-tag is-new">Payment Events</span>
+        <span class="cs-tag">Lifecycle Events</span>
+      </div>
+      <p>This made the event history easier for non-technical users to understand while preserving the depth needed for technical investigation.</p>
+      <p>We also introduced access to order-level and event-level JSON.</p>
+      <div class="cs-fields">
+        <span class="cs-tag is-dark">Order-level JSON</span>
+        <span class="cs-tag is-dark">Event-level JSON</span>
+      </div>
+      <p>Support and engineering teams could investigate questions such as:</p>
+      <div class="cs-bullet-list">
+        <div class="cs-bullet-item is-muted"><p>Why has an order been stuck in a particular state?</p></div>
+        <div class="cs-bullet-item is-muted"><p>Has it exceeded its expected SLA?</p></div>
+        <div class="cs-bullet-item is-muted"><p>Why did an action return a 404?</p></div>
+        <div class="cs-bullet-item is-muted"><p>What data was associated with the event when the problem occurred?</p></div>
+      </div>
+      <p>Investigation could now begin directly within Order Details instead of requiring teams to move between multiple tools.</p>
+      <div class="cs-image">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <circle cx="8.5" cy="8.5" r="1.5" fill="none" stroke="#B0B0B0" stroke-width="1.5"/>
+          <path d="M21 15l-5-5-9 9" fill="none" stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="cs-image-caption">Event categorization &amp; JSON inspector — screenshot</p>
+      </div>
+      <div class="cs-persona">
+        <div class="cs-persona-row"><span class="cs-persona-label">Customer care:</span><span class="cs-persona-flow">Understand → Explain → Resolve</span></div>
+        <div class="cs-persona-row"><span class="cs-persona-label">Technical teams:</span><span class="cs-persona-flow">Investigate → Diagnose → Fix</span></div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="cs-section">
+      <h2>Designing across domains and at scale</h2>
+      <p>The complexity wasn't just in the interface. The experience needed to work across multiple businesses, order lifecycles, technical systems and stakeholder groups.</p>
+      <p>Business teams cared about customer resolution. Support teams needed diagnosis. Engineering needed access to underlying data. Each had different definitions of what mattered.</p>
+      <p>A significant part of the design leadership involved aligning these cross-domain stakeholders around a shared experience, while avoiding solutions that only worked for one business or workflow.</p>
+      <p>We focused on building a scalable information architecture and flexible interaction model that could accommodate new events, APIs, business requirements and personas over time.</p>
+      <div class="cs-quote">
+        <p>The goal wasn't to design for a single order lifecycle. It was to create a foundation that could evolve with the platform.</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="cs-closing">
+      <h2>The outcome</h2>
+      <p>What began as a WISMO problem became a broader systems-design opportunity.</p>
+      <p>Order Details evolved from a fragmented information screen into a shared operational tool for understanding, resolving and investigating orders.</p>
+      <div class="cs-closing-line">
+        <p>One order. One source of truth. Multiple teams. One scalable experience.</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="player" id="player">
+    <div class="player-bar">
+      <button class="player-toggle" id="playerToggle" aria-label="Play">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1.5V12.5L12 7L2 1.5Z" fill="currentColor"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none"><rect x="2" y="1.5" width="3.5" height="11" rx="1" fill="currentColor"/><rect x="8.5" y="1.5" width="3.5" height="11" rx="1" fill="currentColor"/></svg>
+      </button>
+      <div class="player-info" id="playerListToggle">
+        <span class="player-label">Now playing</span>
+        <span class="player-track" id="playerTrackName">Dreamscape</span>
+      </div>
+      <button class="player-nav" id="playerPrev" aria-label="Previous track">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 2V10M10 2L4 6L10 10V2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="player-nav" id="playerNext" aria-label="Next track">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2V10M2 2L8 6L2 10V2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="player-list-btn" id="playerListBtn" aria-label="Show playlist" aria-expanded="false">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 3.5H12M2 7H12M2 10.5H8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <ul class="player-playlist" id="playerPlaylist">
+      <li data-index="0"><span class="playlist-name">Dreamscape</span><span class="playlist-artist">Morgan Cross</span></li>
+      <li data-index="1"><span class="playlist-name">Peaceful Piano</span><span class="playlist-artist">leberch</span></li>
+      <li data-index="2"><span class="playlist-name">Rain Meditation</span><span class="playlist-artist">andriig</span></li>
+      <li data-index="3"><span class="playlist-name">Quiet Phase</span><span class="playlist-artist">QuietPhase</span></li>
+    </ul>
+    <p class="player-credit">Music via <a href="https://pixabay.com/music/" target="_blank" rel="noopener">Pixabay</a></p>
+  </div>
+
+  <audio id="audioEl" preload="none"></audio>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Music player
+    const playlist = [
+      { title: 'Dreamscape', artist: 'Morgan Cross', src: 'audio/track1.mp3' },
+      { title: 'Peaceful Piano', artist: 'leberch', src: 'audio/track2.mp3' },
+      { title: 'Rain Meditation', artist: 'andriig', src: 'audio/track3.mp3' },
+      { title: 'Quiet Phase', artist: 'QuietPhase', src: 'audio/track4.mp3' },
+    ];
+
+    const audioEl = document.getElementById('audioEl');
+    const playerToggle = document.getElementById('playerToggle');
+    const iconPlay = playerToggle.querySelector('.icon-play');
+    const iconPause = playerToggle.querySelector('.icon-pause');
+    const trackNameEl = document.getElementById('playerTrackName');
+    const prevBtn = document.getElementById('playerPrev');
+    const nextBtn = document.getElementById('playerNext');
+    const listBtn = document.getElementById('playerListBtn');
+    const listToggleArea = document.getElementById('playerListToggle');
+    const playlistEl = document.getElementById('playerPlaylist');
+    const playlistItems = Array.from(playlistEl.querySelectorAll('li'));
+    const playerEl = document.getElementById('player');
+
+    let currentIndex = 0;
+    let isPlaying = false;
+
+    function loadTrack(index, autoplay) {
+      currentIndex = (index + playlist.length) % playlist.length;
+      const track = playlist[currentIndex];
+      audioEl.src = track.src;
+      trackNameEl.textContent = track.title;
+      playlistItems.forEach((li) => li.classList.toggle('is-active', Number(li.dataset.index) === currentIndex));
+      if (autoplay) {
+        audioEl.play().catch(() => {});
+      }
+    }
+
+    function setPlayingUI(playing) {
+      isPlaying = playing;
+      iconPlay.style.display = playing ? 'none' : 'block';
+      iconPause.style.display = playing ? 'block' : 'none';
+      playerToggle.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    }
+
+    playerToggle.addEventListener('click', () => {
+      if (!audioEl.src) {
+        loadTrack(currentIndex, true);
+        return;
+      }
+      if (audioEl.paused) {
+        audioEl.play().catch(() => {});
+      } else {
+        audioEl.pause();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => loadTrack(currentIndex - 1, isPlaying));
+    nextBtn.addEventListener('click', () => loadTrack(currentIndex + 1, isPlaying));
+
+    audioEl.addEventListener('play', () => setPlayingUI(true));
+    audioEl.addEventListener('pause', () => setPlayingUI(false));
+    audioEl.addEventListener('ended', () => loadTrack(currentIndex + 1, true));
+
+    listToggleArea.addEventListener('click', () => playerEl.classList.toggle('list-open'));
+    listBtn.addEventListener('click', () => {
+      const isOpen = playerEl.classList.toggle('list-open');
+      listBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    playlistItems.forEach((li) => {
+      li.addEventListener('click', () => {
+        loadTrack(Number(li.dataset.index), true);
+        playerEl.classList.remove('list-open');
+      });
+    });
+
+    trackNameEl.textContent = playlist[0].title;
+    playlistItems[0].classList.add('is-active');
+  </script>
+</body>
+</html>

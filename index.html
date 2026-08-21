@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="intro-overlay" id="introOverlay" aria-hidden="true">
+    <div class="intro-lottie" id="introLottie"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie_light.min.js"></script>
+  <script>
+    if (sessionStorage.getItem('introPlayed')) {
+      document.getElementById('introOverlay').remove();
+    } else {
+      document.body.classList.add('intro-active');
+    }
+  </script>
+
   <header class="nav">
     <div class="nav-inner">
       <a class="nav-name" href="#top">Priyanka Parab</a>
@@ -36,7 +48,7 @@
       <h1>Hi. I'm Priyanka</h1>
       <div class="hero-copy">
         <p>Ambiguity is where I do some of my best work. I enjoy finding clarity when the path forward isn't obvious, connecting the dots across teams and constraints, and turning that thinking into something people can actually use.</p>
-        <p>Over the last two years, AI has changed how I bring ideas to life. I use it to add logic and behavior to my designs, turning them into near-production-ready prototypes that can be tested, challenged, and iterated much earlier.</p>
+        <p>Over the last two years, AI has changed how I bring ideas to life. I use it to add logic and behavior to my designs, turning them into near-production-ready prototypes that can be tested and challenged early, saving engineering effort and organizational cost down the line.</p>
         <p class="muted">Today, I lead two design teams across Commerce at Cimpress, partnering with product and engineering to shape strategy and define what we build across different business domains. I also work with a global team on design system consistency across products and teams.</p>
         <p class="muted">Before Cimpress, I worked at Drona HQ, Freight Tiger, and Trepup.</p>
         <p>The best work happens with curious people who take ownership, challenge assumptions, and enjoy figuring things out together.</p>
@@ -173,6 +185,36 @@
   <audio id="audioEl" preload="none"></audio>
 
   <script>
+    // Intro animation
+    const introOverlay = document.getElementById('introOverlay');
+    if (introOverlay) {
+      const exitIntro = () => introOverlay.classList.add('intro-exit');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reducedMotion || typeof lottie === 'undefined') {
+        setTimeout(exitIntro, 200);
+      } else {
+        const anim = lottie.loadAnimation({
+          container: document.getElementById('introLottie'),
+          renderer: 'svg',
+          loop: false,
+          autoplay: true,
+          path: 'animations/open-book.json',
+        });
+        anim.addEventListener('complete', () => setTimeout(exitIntro, 250));
+        anim.addEventListener('data_failed', exitIntro);
+        setTimeout(exitIntro, 3000);
+      }
+
+      introOverlay.addEventListener('animationend', (e) => {
+        if (e.animationName === 'introShrink') {
+          document.body.classList.remove('intro-active');
+          introOverlay.remove();
+          sessionStorage.setItem('introPlayed', '1');
+        }
+      });
+    }
+
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 

@@ -71,53 +71,45 @@
       <div class="card-row">
         <a class="card-link" href="case-study-wismo.html">
           <article class="card card-wismo">
-            <div class="card-spine"></div>
-            <div class="card-heading">
-              <h3>WISMO</h3>
-              <p class="card-sub">Where is my order?</p>
+            <canvas class="shader-canvas" id="mesh-wismo" aria-hidden="true"></canvas>
+            <div class="card-body">
+              <span class="card-eyebrow">WISMO</span>
+              <h3 class="card-title">Where is my order?</h3>
             </div>
-            <img src="images/wismo.png" alt="Illustration of a person diving into a box" class="card-illustration" />
             <p class="card-caption">Track your order for seamless remediation</p>
-            <p class="card-cta">View case study →</p>
           </article>
         </a>
 
         <a class="card-link" href="case-study-customer360.html">
           <article class="card card-customer360">
-            <div class="card-spine"></div>
-            <div class="card-heading">
-              <h3>Customer 360</h3>
-              <p class="card-sub">Understand your customer</p>
+            <canvas class="shader-canvas" id="mesh-customer360" aria-hidden="true"></canvas>
+            <div class="card-body">
+              <span class="card-eyebrow">Customer 360</span>
+              <h3 class="card-title">Understand your customer</h3>
             </div>
-            <img src="images/customer360.png" alt="Illustration of a person reading a book while sitting cross-legged" class="card-illustration" />
             <p class="card-caption">Understand your customer for better sales</p>
-            <p class="card-cta">View case study →</p>
           </article>
         </a>
 
         <a class="card-link" href="case-study-recare.html">
           <article class="card card-recare">
-            <div class="card-spine"></div>
-            <div class="card-heading">
-              <h3>Recare</h3>
-              <p class="card-sub">Save on refunds</p>
+            <canvas class="shader-canvas" id="mesh-recare" aria-hidden="true"></canvas>
+            <div class="card-body">
+              <span class="card-eyebrow">Recare</span>
+              <h3 class="card-title">Save on refunds</h3>
             </div>
-            <img src="images/recare.png" alt="Illustration of a person running" class="card-illustration" />
             <p class="card-caption">How to save $1mn on refunds and replacements</p>
-            <p class="card-cta">View case study →</p>
           </article>
         </a>
 
         <a class="card-link" href="case-study-order-placement.html">
           <article class="card card-cart">
-            <div class="card-spine"></div>
-            <div class="card-heading">
-              <h3>Cart</h3>
-              <p class="card-sub">Order placement</p>
+            <canvas class="shader-canvas" id="mesh-cart" aria-hidden="true"></canvas>
+            <div class="card-body">
+              <span class="card-eyebrow">Cart</span>
+              <h3 class="card-title">Order placement</h3>
             </div>
-            <img src="images/cart.png" alt="Illustration of a person hugging a giant cup" class="card-illustration" />
             <p class="card-caption">Customer centric order placement</p>
-            <p class="card-cta">View case study →</p>
           </article>
         </a>
       </div>
@@ -309,5 +301,6 @@
     trackNameEl.textContent = playlist[0].title;
     playlistItems[0].classList.add('is-active');
   </script>
+  <script src="mesh-gradient.js"></script>
 </body>
 </html>

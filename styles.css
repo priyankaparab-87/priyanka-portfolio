@@ -1340,6 +1340,21 @@ h1 {
   color: var(--color-muted);
 }
 
+.cs-image.has-photo {
+  height: auto;
+  padding: 32px 28px;
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-color: var(--color-divider);
+}
+
+.cs-image-photo {
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  display: block;
+}
+
 .cs-closing {
   display: flex;
   flex-direction: column;

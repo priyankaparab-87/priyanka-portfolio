@@ -1355,6 +1355,15 @@ h1 {
   display: block;
 }
 
+.cs-image-divider {
+  width: 100%;
+  max-width: 900px;
+  height: 1px;
+  border: none;
+  margin: 8px 0;
+  background-color: var(--color-divider);
+}
+
 .cs-closing {
   display: flex;
   flex-direction: column;

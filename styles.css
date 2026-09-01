@@ -1047,6 +1047,7 @@ h1 {
   flex-wrap: wrap;
   max-width: 900px;
   gap: 24px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 

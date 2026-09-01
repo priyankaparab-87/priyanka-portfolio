@@ -929,7 +929,7 @@ h1 {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: var(--color-ground);
+  background-color: #141414;
 }
 
 .cs-compare-handle {

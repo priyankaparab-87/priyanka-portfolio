@@ -1344,10 +1344,11 @@ h1 {
 
 .cs-image.has-photo {
   height: auto;
-  padding: 32px 28px;
+  padding: 0;
   background-color: #FFFFFF;
   border-style: solid;
   border-color: var(--color-divider);
+  overflow: hidden;
 }
 
 .cs-image-photo {

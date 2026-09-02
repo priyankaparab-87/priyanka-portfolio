@@ -373,7 +373,6 @@ void main() {
     gl.uniform4f(u_shape, 1.26, 0.35, 0.28, 0.00);
     gl.uniform4f(u_surface, 1.82, 1.00, -0.03, 1.48);
     gl.uniform4f(u_finish, 0.52, 0.28, 0.008, 0.05);
-    gl.uniform4f(u_transform, seed, 0.00, 0.16, 0.0);
     gl.uniform4f(u_space, -0.24, -0.03, 0.0, 0.0); // pointer x/y unused, cursor off
     gl.uniform4f(u_cursor, 0.0, 0.0, 0.85, 0.63);  // presence 0 == cursor off
 
@@ -398,13 +397,18 @@ void main() {
     resizeObserver.observe(canvas);
     resize();
 
-    // --- Render loop: only u_scene changes per frame (time + resolution). --
+    // --- Render loop: u_scene (time) and u_transform's rotation update each
+    // frame. The rotation is a full 2*PI cycle, giving the field a slow,
+    // deliberate loop on top of its existing drift.
+    const ROTATE_SPEED = 0.025; // radians/sec — one full loop every ~4.2 min
     const start = performance.now();
     let rafId = null;
 
     function frame(now) {
       const seconds = (now - start) / 1000;
+      const rotate = (seconds * ROTATE_SPEED) % (Math.PI * 2);
       gl.uniform4f(u_scene, width, height, seconds * -0.57, 4.0);
+      gl.uniform4f(u_transform, seed, rotate, 0.16, 0.0);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       rafId = requestAnimationFrame(frame);
     }

@@ -168,6 +168,14 @@
     </div>
   </main>
 
+  <div class="visitor-counter" id="visitorCounter" data-visitor-key="customer360">
+    <svg class="visitor-counter-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+      <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6" />
+    </svg>
+    <span><span class="visitor-counter-value">0</span> visitors</span>
+  </div>
+
   <div class="player" id="player">
     <div class="player-bar">
       <button class="player-toggle" id="playerToggle" aria-label="Play">
@@ -313,5 +321,6 @@
     trackNameEl.textContent = playlist[0].title;
     playlistItems[0].classList.add('is-active');
   </script>
+  <script src="visitor-counter.js"></script>
 </body>
 </html>

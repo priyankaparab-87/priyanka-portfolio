@@ -1226,6 +1226,27 @@ h1 {
   color: var(--color-ground);
 }
 
+.cs-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cs-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cs-detail-item .cs-tag {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cs-detail-item p {
+  margin: 0;
+}
+
 .cs-persona {
   display: flex;
   flex-direction: column;

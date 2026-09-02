@@ -831,6 +831,31 @@ h1 {
   cursor: pointer;
 }
 
+.card-link.is-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+.card-link.is-disabled .card {
+  cursor: default;
+}
+
+.card-soon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .case-study-page {
   display: flex;
   flex-direction: column;

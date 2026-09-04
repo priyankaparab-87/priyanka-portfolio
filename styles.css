@@ -138,6 +138,12 @@ body.intro-active {
   color: var(--color-accent-text);
 }
 
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .nav-contact {
   display: inline-flex !important;
   align-items: center;

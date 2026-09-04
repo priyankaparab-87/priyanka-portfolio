@@ -2048,6 +2048,10 @@ h1 {
 
 /* Working with me page */
 
+.wwm-page .process-intro p {
+  color: var(--color-ink);
+}
+
 .wwm-list {
   display: flex;
   flex-direction: column;
@@ -2055,11 +2059,6 @@ h1 {
 
 .wwm-item {
   padding: 24px 0;
-  border-bottom: 1px solid var(--color-divider);
-}
-
-.wwm-item:last-of-type {
-  border-bottom: none;
 }
 
 .wwm-item h3 {
@@ -2090,8 +2089,6 @@ h1 {
   flex-direction: column;
   gap: 6px;
   margin-top: 32px;
-  padding-top: 32px;
-  border-top: 1px solid var(--color-divider);
 }
 
 .wwm-closing p {

@@ -2051,6 +2051,7 @@ h1 {
 .wwm-page .process-intro p {
   color: var(--color-ink);
   font-style: italic;
+  font-size: 17px;
 }
 
 .wwm-list {

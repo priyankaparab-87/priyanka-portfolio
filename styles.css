@@ -1055,6 +1055,37 @@ h1 {
   gap: 10px;
 }
 
+.cs-video {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  gap: 10px;
+}
+
+.cs-video-frame {
+  width: 100%;
+  height: 560px;
+  border-radius: 6px;
+  border: 1px solid var(--color-divider);
+  overflow: hidden;
+  background-color: #0B0B0C;
+  flex-shrink: 0;
+}
+
+.cs-video-player {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background-color: #0B0B0C;
+}
+
+@media (max-width: 640px) {
+  .cs-video-frame {
+    height: 320px;
+  }
+}
+
 .cs-compare-frame {
   width: 100%;
   height: 560px;

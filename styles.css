@@ -1086,6 +1086,20 @@ h1 {
   }
 }
 
+.cs-video-frame.is-portrait {
+  width: 320px;
+  height: 640px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .cs-video-frame.is-portrait {
+    width: 100%;
+    max-width: 320px;
+    height: 560px;
+  }
+}
+
 .cs-compare-frame {
   width: 100%;
   height: 560px;

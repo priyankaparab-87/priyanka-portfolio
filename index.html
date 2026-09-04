@@ -56,6 +56,61 @@
       </div>
     </section>
 
+    <section class="showcase" id="showcase">
+      <div class="showcase-track" id="showcaseTrack">
+        <a class="showcase-card" href="case-study-wismo.html">
+          <img src="images/order-after.png" alt="WISMO: redesigned Order Details screen" loading="lazy" />
+          <span class="showcase-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="showcase-label">WISMO</span>
+        </a>
+        <a class="showcase-card" href="case-study-wismo.html">
+          <img src="images/event-list.png" alt="WISMO: order event history list" loading="lazy" />
+          <span class="showcase-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="showcase-label">WISMO</span>
+        </a>
+        <a class="showcase-card" href="case-study-customer360.html">
+          <img src="images/customer-lookup-after.png" alt="Customer 360: redesigned customer lookup" loading="lazy" />
+          <span class="showcase-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="showcase-label">Customer 360</span>
+        </a>
+        <a class="showcase-card" href="case-study-customer360.html">
+          <img src="images/customer-recent-orders.png" alt="Customer 360: recent orders view" loading="lazy" />
+          <span class="showcase-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="showcase-label">Customer 360</span>
+        </a>
+        <a class="showcase-card" href="case-study-order-placement.html">
+          <img src="images/order-placement-after.png" alt="Order Placement: redesigned Create cart screen" loading="lazy" />
+          <span class="showcase-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="showcase-label">Order Placement</span>
+        </a>
+        <a class="showcase-card" href="case-study-order-placement.html">
+          <img src="images/cart-create-quote.png" alt="Order Placement: create cart with price breakdown" loading="lazy" />
+          <span class="showcase-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="showcase-label">Order Placement</span>
+        </a>
+      </div>
+      <div class="showcase-nav">
+        <button class="showcase-nav-btn" id="showcasePrev" aria-label="Previous">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2.5L4 7L9 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="showcase-nav-btn" id="showcaseNext" aria-label="Next">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 2.5L10 7L5 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
     <hr class="divider" />
 
     <section class="work" id="work">
@@ -201,6 +256,23 @@
           introOverlay.remove();
           sessionStorage.setItem('introPlayed', '1');
         }
+      });
+    }
+
+    const showcaseTrack = document.getElementById('showcaseTrack');
+    const showcasePrev = document.getElementById('showcasePrev');
+    const showcaseNext = document.getElementById('showcaseNext');
+    if (showcaseTrack && showcasePrev && showcaseNext) {
+      const scrollStep = () => {
+        const card = showcaseTrack.querySelector('.showcase-card');
+        const gap = parseFloat(getComputedStyle(showcaseTrack).gap) || 0;
+        return card ? card.offsetWidth + gap : 320;
+      };
+      showcasePrev.addEventListener('click', () => {
+        showcaseTrack.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+      });
+      showcaseNext.addEventListener('click', () => {
+        showcaseTrack.scrollBy({ left: scrollStep(), behavior: 'smooth' });
       });
     }
 

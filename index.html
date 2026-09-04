@@ -207,20 +207,6 @@
       });
     }
 
-    const contactBtn = document.getElementById('contactBtn');
-    if (contactBtn && navigator.clipboard) {
-      contactBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const originalText = contactBtn.textContent;
-        navigator.clipboard.writeText('pinka.parab@gmail.com').then(() => {
-          contactBtn.textContent = 'Copied to clipboard';
-          setTimeout(() => {
-            contactBtn.textContent = originalText;
-          }, 1600);
-        });
-      });
-    }
-
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 

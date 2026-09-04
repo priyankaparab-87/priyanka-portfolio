@@ -2284,3 +2284,116 @@ h1 {
   color: var(--color-muted);
   margin: 0;
 }
+
+/* Password gate */
+
+body.gated-page > header.nav,
+body.gated-page > main.page,
+body.gated-page > .player,
+body.gated-page > audio {
+  display: none;
+}
+
+html.pw-unlocked body.gated-page > header.nav {
+  display: block;
+}
+
+html.pw-unlocked body.gated-page > main.page {
+  display: block;
+}
+
+html.pw-unlocked body.gated-page > .player {
+  display: block;
+}
+
+.pw-gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-ground);
+  padding: 20px;
+}
+
+.pw-gate-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.pw-gate-eyebrow {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent-text);
+}
+
+.pw-gate-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.pw-gate-subtitle {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: var(--color-muted);
+}
+
+.pw-gate-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.pw-gate-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--color-divider);
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--color-ink);
+  background-color: var(--color-ground);
+}
+
+.pw-gate-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.pw-gate-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--color-accent);
+  color: var(--color-ground);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.pw-gate-error {
+  margin: 0;
+  font-size: 13px;
+  color: #C0392B;
+}
+
+.pw-gate-back {
+  margin-top: 10px;
+}

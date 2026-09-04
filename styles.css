@@ -383,29 +383,32 @@ h1 {
   aspect-ratio: 16 / 10;
   border-radius: 18px;
   border: 1px solid var(--color-divider);
-  background-color: #FAFAFA;
-  background-image: radial-gradient(var(--color-divider) 1px, transparent 1px);
+  background-color: #EEF0F3;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
   background-size: 18px 18px;
   overflow: hidden;
 }
 
 .showcase-slide {
   position: absolute;
-  inset: 28px;
+  top: 50%;
+  left: 50%;
+  width: 62%;
+  height: 62%;
   display: block;
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--color-ground);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
   opacity: 0;
-  transform: scale(0.98);
+  transform: translate(-50%, -50%) scale(0.96);
   transition: opacity 0.7s ease, transform 0.7s ease;
   pointer-events: none;
 }
 
 .showcase-slide.is-active {
   opacity: 1;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
   pointer-events: auto;
 }
 
@@ -457,7 +460,8 @@ h1 {
     aspect-ratio: 4 / 5;
   }
   .showcase-slide {
-    inset: 16px;
+    width: 78%;
+    height: 78%;
   }
 }
 

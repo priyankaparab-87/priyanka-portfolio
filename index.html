@@ -266,6 +266,22 @@
       startAutoplay();
     }
 
+    const contactBtn = document.getElementById('contactBtn');
+    if (contactBtn) {
+      const email = 'pinka.parab@gmail.com';
+      const defaultLabel = contactBtn.textContent;
+
+      contactBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText(email).then(() => {
+          contactBtn.textContent = 'Copied to clipboard!';
+          setTimeout(() => {
+            contactBtn.textContent = defaultLabel;
+          }, 1800);
+        });
+      });
+    }
+
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
 

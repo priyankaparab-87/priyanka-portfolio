@@ -440,6 +440,7 @@ h1 {
 }
 
 .showcase-dot {
+  position: relative;
   width: 8px;
   height: 8px;
   padding: 0;
@@ -448,6 +449,17 @@ h1 {
   background-color: var(--color-divider);
   cursor: pointer;
   transition: background-color 0.2s ease, width 0.2s ease;
+}
+
+/* Invisible 44px hit area around the small dot */
+.showcase-dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
 }
 
 .showcase-dot.is-active {
@@ -541,6 +553,47 @@ h1 {
   align-self: flex-start;
 }
 
+@media (max-width: 640px) {
+  .card-link,
+  .card {
+    width: 100%;
+  }
+
+  .card {
+    min-height: 240px;
+  }
+}
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.site-footer h2 {
+  margin: 0;
+}
+
+.site-footer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.site-footer-note {
+  margin-top: 16px !important;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
 /* Link sections */
 
 .link-section {
@@ -628,7 +681,7 @@ h1 {
 @media (max-width: 640px) {
   .visitor-counter {
     left: 16px;
-    bottom: 116px;
+    bottom: 76px;
     padding: 8px 14px;
     font-size: 12px;
   }
@@ -777,12 +830,52 @@ h1 {
   color: var(--color-muted);
 }
 
+/* On phones the player collapses to a compact pill; the credit only shows
+   with the playlist open. */
 @media (max-width: 640px) {
   .player {
-    left: 16px;
     right: 16px;
     bottom: 16px;
     width: auto;
+    max-width: calc(100vw - 32px);
+    border-radius: 999px;
+  }
+
+  .player.list-open {
+    border-radius: 14px;
+  }
+
+  .player-bar {
+    gap: 4px;
+    padding: 4px 4px 4px 6px;
+  }
+
+  .player-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .player-info {
+    flex: 0 1 auto;
+    padding: 0 6px;
+  }
+
+  .player-label {
+    display: none;
+  }
+
+  .player-nav,
+  .player-list-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .player-credit {
+    display: none;
+  }
+
+  .player.list-open .player-credit {
+    display: block;
   }
 }
 

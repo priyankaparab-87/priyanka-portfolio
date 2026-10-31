@@ -291,9 +291,6 @@ h1 {
   line-height: 1.6;
 }
 
-.hero-copy p.muted {
-  color: var(--color-muted);
-}
 
 .cta-row {
   display: flex;
